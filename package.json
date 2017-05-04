@@ -1,0 +1,32 @@
+{
+  "name": "ionic-parallax",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "module": "dist/index.js",
+  "scripts": {
+    "build": "rm -rf aot dist && ngc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zyra/ionic-parallax.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zyra/ionic-parallax/issues"
+  },
+  "homepage": "https://github.com/zyra/ionic-parallax#readme",
+  "devDependencies": {
+    "@angular/common": "^4.1.0",
+    "@angular/compiler": "^4.1.0",
+    "@angular/compiler-cli": "^4.1.0",
+    "@angular/core": "^4.1.0",
+    "@angular/forms": "^4.1.0",
+    "@angular/platform-browser": "^4.1.0",
+    "ionic-angular": "^3.1.1",
+    "rxjs": "^5.3.1",
+    "typescript": "^2.3.2"
+  }
+}
