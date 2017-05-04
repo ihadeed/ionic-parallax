@@ -28,12 +28,28 @@ export class ParallaxDirective implements OnInit, OnDestroy {
     ngOnInit() {
         let el: HTMLElement = this.getNativeElement();
 
+        // We figure out everything by measuring the distance between
+        // <ion-content> and the element this directive is attached to.
+
+        // In case this element is not a direct child of <ion-content>,
+        // we need to specify the number of parent nodes separating this
+        // element from <ion-content>.
+
+        // For example:
+        // <ion-content>
+        //   <ion-card>
+        //      <div parallax [nodes]="1" style="background-url: url(...)"></div>
+        //   </ion-card>
+        // </ion-content>
+
         if (!!this.nodes && !isNaN(this.nodes) && this.nodes > 0) {
             for (let i = 0; i < this.nodes; i++) {
                 try {
                     el = el.parentElement;
                 } catch (e) {
-                    this.getNativeElement();
+                    // this shouldn't happen unless if the developer misconfigured this element
+                    // use any element as a fallback... it will not really work but at least it won't throw errors.
+                    el = this.getNativeElement();
                 }
             }
         }
