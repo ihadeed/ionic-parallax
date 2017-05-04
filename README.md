@@ -1,5 +1,7 @@
 # ionic-parallax
 
+WIP, here's a quick usage example: 
+
 ```bash
 npm i --save ionic-parallax
 ```
@@ -18,7 +20,18 @@ import { ParallaxModule } from 'ionic-parallax';
 ```html
 <ion-content>
   <ion-card>
-     <div parallax [nodes]="1" style="background-url: url(...)"></div>
+     <div parallax [ratio]=50></div>
   </ion-card>
 </ion-content>
+```
+
+```scss
+ion-card {
+  position: relative;
+   
+  > img[parallax] {
+    position: absolute;
+    height: inherit;
+  }
+}
 ```
