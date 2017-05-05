@@ -1,8 +1,15 @@
 import { NgModule } from '@angular/core';
-import { ParallaxDirective } from './parallax.directive';
+import { ParallaxBackground } from './parallax-bg.directive';
+import { ParallaxHeader } from './parallax-header.directive';
 
 @NgModule({
-    declarations: [ ParallaxDirective ],
-    exports: [ ParallaxDirective ]
+  declarations: [
+    ParallaxBackground,
+    ParallaxHeader
+  ],
+  exports: [
+    ParallaxBackground,
+    ParallaxHeader
+  ]
 })
-export class ParallaxModule { }
+export class ParallaxModule {}
